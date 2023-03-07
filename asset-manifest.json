@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/memegen/static/css/main.42ba20fd.css",
+    "main.js": "/memegen/static/js/main.3c5862de.js",
+    "static/media/Impact.ttf": "/memegen/static/media/Impact.0294f8285a2493417c09.ttf",
+    "static/media/Karla.ttf": "/memegen/static/media/Karla.e7cdc609f35daffcb788.ttf",
+    "index.html": "/memegen/index.html",
+    "main.42ba20fd.css.map": "/memegen/static/css/main.42ba20fd.css.map",
+    "main.3c5862de.js.map": "/memegen/static/js/main.3c5862de.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.42ba20fd.css",
+    "static/js/main.3c5862de.js"
+  ]
+}
