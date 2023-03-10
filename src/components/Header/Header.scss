@@ -1,22 +1,26 @@
 .header {
-    padding: 12px;
-    background: linear-gradient(90deg, #672280 1%, #a626d3 100%);
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
-
-    img {
-        width: 48px;
-        margin-right: 12px;
-    }
+    padding: 24px 0;
+    background: linear-gradient(45deg, hsla(39, 100%, 71%, 1) 0%, hsla(216, 100%, 62%, 1) 100%);
+    text-align: center;
 
     h1 {
-        color: white;
-        font-style: normal;
-        font-weight: 700;
+        color: #ffffff;
+        font-weight: 800;
         font-size: 28px;
-        line-height: 24px;
+        line-height: 28px;
         letter-spacing: -0.1em;
+        text-transform: uppercase;
+
+        a {
+            text-decoration: none;
+            
+            &:link {
+                color: #ffffff;
+            }
+            
+            &:visited {
+                color: #ffffff;
+            }        
+        } 
     }
 }

@@ -1,72 +1,114 @@
-.main--wrapper {
-    width: 800px;
+$breakpoint-mobile: 575.98px;
+$breakpoint-desktop: 991.98px;
+
+.main {
     margin: 0 auto;
+    max-width: 800px;
 }
 
 .form {
     display: grid;
-    grid-template: 48px 48px / 1fr 1fr;
-    gap: 20px;
-    padding: 20px;
     margin: 0 auto;
-
-    input {
-        border: 1px solid #d5d4d8;
-        border-radius: 10px;
-        padding: 10px; 
-        font-family: Karla, sans-serif;
-        font-size: 18px;
-        font-weight: 400;
-        letter-spacing: -0.05em;
-
-        &:focus{
-            outline: none !important;
-            border-color:#a818da;
-        }
+    
+    @media (max-width: $breakpoint-mobile) {
+        grid-template: 48px / 1fr;
+        gap: 12px;
+        padding: 12px;
+    } 
+    @media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop)) {
+        grid-template: 48px 48px / 1fr 1fr;
+        gap: 24px;
+        padding: 24px;
+    } 
+    @media (min-width: $breakpoint-desktop) {
+        grid-template: 48px 48px / 1fr 1fr;
+        gap: 36px;
+        padding: 36px;
     }
+}
 
-    button {
-        background: linear-gradient(90deg, #711f8d 1%, #a818da 100%);
-        border-radius: 10px;
-        padding: 10px;
-        border: none;
-        cursor: pointer;
-        color: white;
-        font-size: 20px;
-        font-style: normal;
-        font-weight: 500;
-        letter-spacing: -0.05em;
-        grid-column: 1 / -1;
+.form--input {
+    border: 1px solid #d5d4d8;
+    border-radius: 10px;
+    padding: 10px; 
+    font-family: Karla, sans-serif;
+    font-size: 18px;
+    font-weight: 400;
+    letter-spacing: -0.05em;
+
+    &:focus{
+        outline: none !important;
+        border-color:rgb(159, 169, 178);
     }
+} 
+
+.form--button {
+    background: linear-gradient(45deg, hsla(39, 100%, 71%, 1) 0%, hsla(216, 100%, 62%, 1) 100%);
+    border-radius: 10px;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    color: white;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    letter-spacing: -0.05em;
+    grid-column: 1 / -1;
 }
 
 .meme {
     position: relative;
 
-    .meme--image {
-        width: 100%;
-    }
-
-    .meme--text {
+    h2 {
         position: absolute;
         font-family: Impact, sans-serif;
-        font-weight: 300;
-        font-size: 48px;
-        line-height: 48px;
+        font-weight: 300;     
         color: #FFFFFF;   
         text-transform: uppercase;
-        -webkit-text-stroke: 1px #000000;  
-    }
+        -webkit-text-stroke: 2px #000000;  
+        cursor: default;
+        user-select: none;
 
-    .top {
-        top: 48px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+        @media (max-width: $breakpoint-mobile) {
+            font-size: 24px;
+            line-height: 24px;
+        } 
+        @media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop)) {
+            font-size: 36px;
+            line-height: 36px;
+        } 
+        @media (min-width: $breakpoint-desktop) {
+            font-size: 48px;
+            line-height: 48px;
+        }
     }
+}
 
-    .bottom {
-        bottom: 10px;
-        left: 50%;
-        transform: translate(-50%, -50%);
+.meme--image {
+    display: block;
+    margin: 0 auto;
+    border: 1px solid #d5d4d8;
+    border-radius: 10px;    
+
+    @media (max-width: $breakpoint-mobile) {
+        max-width: 300px;
+    } 
+    @media ((min-width: $breakpoint-mobile) and (max-width: $breakpoint-desktop)) {
+        max-width: 400px;
+    } 
+    @media (min-width: $breakpoint-desktop) {
+        max-width: 500px;
     }
+}
+
+.meme--text-top {
+    top: 48px;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.meme--text-bottom {
+    bottom: 10px;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

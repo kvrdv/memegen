@@ -34,11 +34,11 @@ export default function Meme() {
     }
 
     return (
-        <main className="main--wrapper">
+        <main className="main">
             <form className="form">
                 <input 
                     type="text" 
-                    className="top--text" 
+                    className="form--input" 
                     placeholder="Top text"
                     name="topText" 
                     value={meme.topText}
@@ -46,7 +46,7 @@ export default function Meme() {
                 />
                 <input 
                     type="text" 
-                    className="bottom--text" 
+                    className="form--input" 
                     placeholder="Bottom text"
                     name="bottomText" 
                     value={meme.bottomText}
@@ -54,15 +54,16 @@ export default function Meme() {
                 /> 
                 <button
                     type="button" 
+                    className="form--button"
                     onClick={getNewMemeImage}
                 >
-                    Get a new meme image 🖼
+                    Get a new meme image
                 </button>
             </form>
             <div className="meme">
                 <img src={meme.randomImage} className="meme--image" alt="Meme" />
-                <h2 className="meme--text top">{meme.topText}</h2>
-                <h2 className="meme--text bottom">{meme.bottomText}</h2>
+                <h2 className="meme--text-top">{meme.topText}</h2>
+                <h2 className="meme--text-bottom">{meme.bottomText}</h2>
             </div>
             
         </main>
