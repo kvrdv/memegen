@@ -38,7 +38,7 @@ export default function Meme() {
             <form className="form">
                 <input 
                     type="text" 
-                    className="form--input" 
+                    className="form--input form--input-1" 
                     placeholder="Top text"
                     name="topText" 
                     value={meme.topText}
@@ -46,24 +46,36 @@ export default function Meme() {
                 />
                 <input 
                     type="text" 
-                    className="form--input" 
+                    className="form--input form--input-2" 
                     placeholder="Bottom text"
                     name="bottomText" 
                     value={meme.bottomText}
                     onChange={handlerChange}
                 /> 
-                <button
-                    type="button" 
-                    className="form--button"
-                    onClick={getNewMemeImage}
-                >
-                    Get a new meme image
-                </button>
+                <div className="form--buttons-wrapper">
+                    <button
+                        type="button" 
+                        className="form--button"
+                        onClick={getNewMemeImage}
+                    >
+                        Get new image 🖼️
+                    </button>
+                    <button
+                        type="button" 
+                        className="form--button"
+                        // onClick={getNewMemeImage}
+                    >
+                        Export meme 💾
+                    </button>
+                </div>
             </form>
-            <div className="meme">
-                <img src={meme.randomImage} className="meme--image" alt="Meme" />
-                <h2 className="meme--text-top">{meme.topText}</h2>
-                <h2 className="meme--text-bottom">{meme.bottomText}</h2>
+            <div className="meme-wrapper">
+                <div className="meme">
+                    <img src={meme.randomImage} className="meme--image" alt="Meme" />
+                    <h2 className="meme--text meme--text-top">{meme.topText}</h2>
+                    <h2 className="meme--text meme--text-bottom">{meme.bottomText}</h2>
+                </div>
+                
             </div>
             
         </main>
